@@ -1,0 +1,20 @@
+<div class="k-block">
+  <button kendoButton [look]="'default'">Default Button</button>
+  <button kendoButton [look]="'outline'">Outline Button</button>
+  <button kendoButton [look]="'bare'">Bare Button</button>
+  <button kendoButton [disabled]="true">Button</button>
+</div>
+<hr>
+
+<button kendoButton [primary]="true">Primary Action</button>
+<button kendoButton [togglable]="true">Togglable</button>
+<br>
+<hr>
+
+<!-- https://www.telerik.com/kendo-angular-ui/components/styling/icons/ -->
+
+<kendo-buttongroup [width]="100" look="outline">
+  <button kendoButton [icon]="'pencil'" [togglable]="true">Icon Button</button>
+  <button kendoButton [icon]="'check'" [togglable]="true">Icon Button</button>
+  <button kendoButton [icon]="'calendar'" [togglable]="true">Icon Button</button>
+</kendo-buttongroup>

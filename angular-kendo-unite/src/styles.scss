@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary: #ff69b4;
+
+$button-text: #ff69b4;
+
+// styles.scss
+// Note: Always remember to update theme "kendo-theme-material"
+@import "~@progress/kendo-theme-material/dist/all.scss";
+// @import "~@progress/kendo-theme-material/scss/all"; // build takes time
+
+/* OR */
+// Import only the required styles.
+// @import "~@progress/kendo-theme-material/scss/button/_index.scss";
+/* OR */
+// @import "~@progress/kendo-theme-material/scss/button";
+
+.k-button.k-bare,
+.k-button.k-bare:hover {
+  color: $button-text;
+}
