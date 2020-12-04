@@ -22,13 +22,16 @@
     "@angular/router": "~10.2.0",
     "@progress/kendo-angular-buttons": "^5.5.2",
     "@progress/kendo-angular-common": "^1.0.0",
+    "@progress/kendo-angular-inputs": "^6.7.4",
     "@progress/kendo-angular-l10n": "^2.0.0",
     "@progress/kendo-angular-popup": "^3.0.0",
     "@progress/kendo-theme-default": "latest",
     "@progress/kendo-theme-material": "^3.22.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@progress/kendo-angular-intl": "^2.0.0",
+    "@progress/kendo-drawing": "^1.5.12"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1002.0",

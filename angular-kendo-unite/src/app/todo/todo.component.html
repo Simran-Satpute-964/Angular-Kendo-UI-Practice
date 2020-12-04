@@ -1,0 +1,18 @@
+<div>
+  <h1>What good shall I do today ?</h1>
+  <input kendoTextBox
+         type="text"
+         placeholder="Add a to-do item"
+         class="new-todo-input"
+         #itemInput
+         (keyup.enter)="addToDo(itemInput)">
+
+  <div *ngIf="todos" class="list-group">
+    <button kendoButton
+      type="button"
+      class="todo"
+      *ngFor="let todo of todos; index as i">
+      <span>{{todo.item}}</span>
+    </button>
+  </div>
+</div>
