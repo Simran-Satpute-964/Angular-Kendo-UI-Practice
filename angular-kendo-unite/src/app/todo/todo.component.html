@@ -1,18 +1,39 @@
-<div>
-  <h1>What good shall I do today ?</h1>
-  <input kendoTextBox
-         type="text"
-         placeholder="Add a to-do item"
-         class="new-todo-input"
-         #itemInput
-         (keyup.enter)="addToDo(itemInput)">
+<div class="todo-comp-wrapper">
 
-  <div *ngIf="todos" class="list-group">
-    <button kendoButton
-      type="button"
-      class="todo"
-      *ngFor="let todo of todos; index as i">
-      <span>{{todo.item}}</span>
-    </button>
+  <div @todoAnimations class="todo-list-wrapper">
+    <h1>What good shall I do today ?</h1>
+    <input kendoTextBox
+           type="text"
+           placeholder="Add a to-do item"
+           class="new-todo-input"
+           #itemInput
+           (keyup.enter)="addToDo(itemInput)">
+
+    <div *ngIf="todos" class="list-group">
+      <button kendoButton @todoItem
+        type="button"
+        class="todo"
+        *ngFor="let todo of todos; index as i">
+        <span (click)="removeToDo(i)">{{todo.item}}</span>
+        <kendo-timepicker [(value)]="todo.due" (valueChange)="onTimeChange()"></kendo-timepicker>
+      </button>
+    </div>
+
+    <div *ngIf="todos.length == 0" @fade class="finished-list">Finish</div>
   </div>
+
+  <kendo-chart>
+    <kendo-chart-title text="Busiest timeof day"></kendo-chart-title>
+
+    <kendo-chart-series>
+      <kendo-chart-series-item
+      [data]="hourlyTodos"
+      [name]="field"
+      field="items.length"
+      categoryField="humanizedValue"
+      type="column"
+      >
+      </kendo-chart-series-item>
+    </kendo-chart-series>
+  </kendo-chart>
 </div>

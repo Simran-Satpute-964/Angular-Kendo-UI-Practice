@@ -1,0 +1,174 @@
+<h1><mark>Resizing, Filtering, Grouping</mark></h1>
+<kendo-grid
+    [kendoGridBinding]="gridData"
+    [resizable]="true"
+    [filterable]="true"
+    [groupable]="true"
+    [group]="groupBy"
+    [height]="410"
+  >
+  <kendo-grid-column field="ProductID" title="ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="ProductName" title="Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="Category.CategoryName" title="Category">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitPrice" title="Price" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+      </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+<h1><mark>Sorting</mark></h1>
+<kendo-grid
+    [kendoGridBinding]="gridData"
+    [resizable]="true"
+    [filterable]="true"
+    [sortable]="true"
+    [height]="410"
+  >
+  <kendo-grid-column field="ProductID" title="ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="ProductName" title="Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="Category.CategoryName" title="Category">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitPrice" title="Price" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+      </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+<h1><mark>Multiple Column Sorting</mark></h1>
+<kendo-grid
+    [kendoGridBinding]="gridData"
+    [resizable]="true"
+    [filterable]="true"
+    [sortable]="{
+      allowUnsort: true,
+      mode: 'multiple'
+    }"
+    [height]="410"
+  >
+  <kendo-grid-column field="ProductID" title="ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="ProductName" title="Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="Category.CategoryName" title="Category">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitPrice" title="Price" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+      </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+<h1><mark>Paging</mark></h1>
+<kendo-grid
+    [kendoGridBinding]="gridData"
+    [resizable]="true"
+    [filterable]="true"
+    [pageable]="true"
+    [pageSize]="8"
+    [skip]="2"
+    [height]="410"
+  >
+  <kendo-grid-column field="ProductID" title="ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="ProductName" title="Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="Category.CategoryName" title="Category">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitPrice" title="Price" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+      </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+<h1><mark>Custom Item No Paging</mark></h1>
+<kendo-grid
+    [kendoGridBinding]="gridData"
+    [resizable]="true"
+    [filterable]="true"
+    [pageable]="{
+      buttonCount: 3,
+      pageSizes: [5, 10, 20]
+    }"
+    [pageSize]="5"
+    [height]="410"
+  >
+  <kendo-grid-column field="ProductID" title="ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="ProductName" title="Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="Category.CategoryName" title="Category">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitPrice" title="Price" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+      </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>

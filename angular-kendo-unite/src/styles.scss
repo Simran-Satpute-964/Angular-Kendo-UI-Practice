@@ -1,21 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
 
-$primary: #ff69b4;
+// $primary: #ff69b4;
 
-$button-text: #ff69b4;
+// $button-text: #ff69b4;
+$grid-edit-cell-border: rgba(0, 0, 0, .12) !default;
 
-// styles.scss
-// Note: Always remember to update theme "kendo-theme-material"
-@import "~@progress/kendo-theme-material/dist/all.scss";
-// @import "~@progress/kendo-theme-material/scss/all"; // build takes time
+// // styles.scss
+// // Note: Always remember to update theme "kendo-theme-material"
+// @import "~@progress/kendo-theme-material/dist/all.scss";
+// // @import "~@progress/kendo-theme-material/scss/all"; // build takes time
 
-/* OR */
-// Import only the required styles.
-// @import "~@progress/kendo-theme-material/scss/button/_index.scss";
-/* OR */
-// @import "~@progress/kendo-theme-material/scss/button";
+// /* OR */
+// // Import only the required styles.
+// // @import "~@progress/kendo-theme-material/scss/button/_index.scss";
+// /* OR */
+// // @import "~@progress/kendo-theme-material/scss/button";
 
-.k-button.k-bare,
-.k-button.k-bare:hover {
-  color: $button-text;
+// .k-button.k-bare,
+// .k-button.k-bare:hover {
+//   color: $button-text;
+// }
+
+// body {
+//   margin: 0;
+//   padding: 50px;
+//   font: 18px sans-serif;
+// }
+
+
+
+
+/*
+* * To change css of kendo grid
+* * Go to stackblitz example --
+* * on docs and copy stylesheet url from index.html
+* * e.g. https://unpkg.com/@progress/kendo-theme-default@4.27.0/dist/all.css
+*/
+
+
+.k-grid {
+  tr, td {
+    border-color: $grid-edit-cell-border;
+  }
+
+  tr.k-alt {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.k-grid-header,
+.k-grid-toolbar,
+.k-grouping-header,
+.k-grid-add-row,
+.k-grid-footer {
+    color: #656565;
+    background-color: #f6f6f6;
 }

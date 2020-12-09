@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+$grid-edit-cell-border: rgba(0, 0, 0, .12) !default;
+
+@import "~@progress/kendo-theme-default/dist/all.scss";
+
+
+
+/*
+* * To change css of kendo grid
+* * Go to stackblitz example --
+* * on docs and copy stylesheet url from index.html
+* * e.g. https://unpkg.com/@progress/kendo-theme-default@4.27.0/dist/all.css
+*/
+
+
+.k-grid {
+  tr, td {
+    border-color: $grid-edit-cell-border;
+  }
+
+  tr.k-alt {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.k-grid-header,
+.k-grid-toolbar,
+.k-grouping-header,
+.k-grid-add-row,
+.k-grid-footer {
+    color: #656565;
+    background-color: #f6f6f6;
+}

@@ -7,6 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonControlPanelComponent } from './button-control-panel/button-control-panel.component';
 import { TodoComponent } from './todo/todo.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { HourPipe } from './hour.pipe';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+import { KendoGridComponent } from './kendo-grid/kendo-grid.component';
+import { GridModule } from '@progress/kendo-angular-grid';
 
 
 
@@ -15,15 +21,20 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
   declarations: [
     AppComponent,
     ButtonControlPanelComponent,
-    TodoComponent
+    TodoComponent,
+    HourPipe,
+    KendoGridComponent,
   ],
   imports: [
     BrowserModule,
     ButtonsModule,
     BrowserAnimationsModule,
-    InputsModule
+    InputsModule,
+    DateInputsModule,
+    ChartsModule,
+    GridModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HourPipe],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

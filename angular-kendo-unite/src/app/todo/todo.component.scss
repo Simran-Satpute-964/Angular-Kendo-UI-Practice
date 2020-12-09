@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,400');
 
+.todo-comp-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-list-wrapper {
+  width: 60%
+}
+
+kendo-chart {
+  width: 35%
+}
+
 h1 {
   margin: 0;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .new-todo-input, .todo {
@@ -18,10 +32,15 @@ h1 {
   margin: 25px 0;
   height: 50px;
   border: 0.5px solid;
+
+  &:hover {
+    border: 0.5px solid;
+  }
 }
 
 .todo {
   display: flex;
+  justify-content: space-between;
   padding: 0 20%;
   align-content: center;
 
@@ -43,7 +62,49 @@ h1 {
   }
 }
 
-.list-group {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,218,18,0.7239709443099274) 0%, rgba(245,66,66,0.728813559322034) 100%);
+$todos: 45;
+@for $i from 1 through $todos {
+  .todo:nth-last-child(#{$i}n) {
+    background-color: hsl((360deg / $todos * $i), 75%, 75%);
+  }
+}
+
+.finished-list {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+
+// time picker customizing styles
+
+.kendo-timepicker {
+  height: 30px;
+}
+
+.k-timepicker:hover,
+.k-timepicker:hover .k-select,
+.k-timepicker .k-picker-wrap,
+.k-dateinput .k-dateinput-wrap,
+.k-timepicker .k-select {
+  background: none;
+  border: none;
+}
+
+.k-timepicker:hover .k-select {
+  background-image: none;
+}
+
+.k-dateinput-wrap .k-input,
+.k-timepicker .k-select {
+  color: rgb(255, 255, 255) !important;
+}
+
+.k-dateinput-wrap input:focus, .k-timepicker .k-state-focused {
+  box-shadow: none;
+}
+
+.k-dateinput-wrap input::selection {
+  background-color: transparent;
 }
