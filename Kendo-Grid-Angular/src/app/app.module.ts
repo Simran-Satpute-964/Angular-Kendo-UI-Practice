@@ -14,6 +14,7 @@ import { ProductsBindingDirective } from './remote-binding/products-binding.dire
 import { CascadingDropdownComponent } from './cascading-dropdown/cascading-dropdown.component';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { EditOnRowClickComponent } from './edit-on-row-click/edit-on-row-click.component';
+import { DataQueryComponent } from './data-query/data-query.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EditOnRowClickComponent } from './edit-on-row-click/edit-on-row-click.c
     ProductsBindingDirective,
     CascadingDropdownComponent,
     EditOnRowClickComponent,
+    DataQueryComponent,
   ],
   imports: [
     HttpClientModule,
