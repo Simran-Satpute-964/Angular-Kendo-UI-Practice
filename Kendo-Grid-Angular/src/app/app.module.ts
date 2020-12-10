@@ -6,11 +6,14 @@ import { KendoGridTutorialComponent } from './kendo-grid-tutorial/kendo-grid-tut
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataTypesComponent } from './data-types/data-types.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoriesService, ProductsService } from './northwind.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RemoteBindingComponent } from './remote-binding/remote-binding.component';
 import { ProductsBindingDirective } from './remote-binding/products-binding.directive';
+import { CascadingDropdownComponent } from './cascading-dropdown/cascading-dropdown.component';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { EditOnRowClickComponent } from './edit-on-row-click/edit-on-row-click.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,8 @@ import { ProductsBindingDirective } from './remote-binding/products-binding.dire
     DataTypesComponent,
     RemoteBindingComponent,
     ProductsBindingDirective,
+    CascadingDropdownComponent,
+    EditOnRowClickComponent,
   ],
   imports: [
     HttpClientModule,
@@ -26,6 +31,8 @@ import { ProductsBindingDirective } from './remote-binding/products-binding.dire
     BrowserModule,
     BrowserAnimationsModule,
     GridModule,
+    DropDownsModule,
+    ReactiveFormsModule,
   ],
   providers: [CategoriesService, ProductsService],
   bootstrap: [AppComponent],
