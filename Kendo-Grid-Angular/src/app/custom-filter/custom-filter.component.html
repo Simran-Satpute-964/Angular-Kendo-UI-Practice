@@ -1,0 +1,25 @@
+<kendo-grid
+        [data]="gridData"
+        [filter]="filter"
+        [filterable]="true"
+        (filterChange)="filterChange($event)"
+        [height]="400"
+    >
+    <kendo-grid-column field="ProductName" title="Product Name">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Unit Price" width="230" filter="numeric">
+    </kendo-grid-column>
+    <kendo-grid-column field="Discontinued" width="120">
+        <ng-template kendoGridFilterCellTemplate>
+            <kendo-switch
+                (valueChange)="switchChange($event)"
+                offLabel="No"
+                [checked]="checked"
+                onLabel="Yes">
+            </kendo-switch>
+        </ng-template>
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+        </ng-template>
+    </kendo-grid-column>
+    </kendo-grid>

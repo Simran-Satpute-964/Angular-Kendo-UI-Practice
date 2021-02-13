@@ -1,22 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,400');
 
+.wrapper {
+  @media (min-width: 300px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .todo-comp-wrapper {
   display: flex;
   justify-content: space-between;
+  @media (min-width: 300px) {
+    width: 100%
+  }
+  @media (min-width: 800px) {
+    width: 70%
+  }
+  @media (min-width: 1020px) {
+    width: 60%
+  }
 }
 
 .todo-list-wrapper {
-  width: 60%
+  width: 100%;
 }
 
 kendo-chart {
-  width: 35%
+  @media (min-width: 300px) {
+    width: 100%   
+  }
+  @media (min-width: 800px) {
+    width: 25%
+  }
+  @media (min-width: 1020px) {
+    width: 35%
+  }
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   margin: 0;
   text-transform: uppercase;
   text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(0,0,0,0.7511379551820728) 43%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .new-todo-input, .todo {
@@ -26,6 +65,10 @@ h1 {
   font-size: 18px;
   line-height: 50px;
   text-align: center;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 }
 
 .new-todo-input {
@@ -39,12 +82,23 @@ h1 {
 }
 
 .todo {
+  @media (min-width: 300px) {
+    padding: 0 0.5rem;
+  }
+  
+  @media (min-width: 600px) {
+    padding: 0 2rem;
+  }
+
+  @media (min-width: 1020px) {
+    padding: 0 5rem;
+  }
+
   display: flex;
   justify-content: space-between;
-  padding: 0 20%;
   align-content: center;
+  min-height: 50px;
 
-  height: 50px;
   background: none;
   border: none;
   border-radius: 0;
@@ -81,6 +135,7 @@ $todos: 45;
 
 .kendo-timepicker {
   height: 30px;
+    width: 30px;
 }
 
 .k-timepicker:hover,

@@ -13,9 +13,8 @@ import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 import { KendoGridComponent } from './kendo-grid/kendo-grid.component';
 import { GridModule } from '@progress/kendo-angular-grid';
-
-
-
+import { OtherComponentsComponent } from './other-components/other-components.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +23,7 @@ import { GridModule } from '@progress/kendo-angular-grid';
     TodoComponent,
     HourPipe,
     KendoGridComponent,
+    OtherComponentsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +33,7 @@ import { GridModule } from '@progress/kendo-angular-grid';
     DateInputsModule,
     ChartsModule,
     GridModule,
+    FormsModule,
   ],
   providers: [HourPipe],
   bootstrap: [AppComponent],

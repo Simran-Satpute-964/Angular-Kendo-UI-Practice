@@ -15,6 +15,9 @@ import { CascadingDropdownComponent } from './cascading-dropdown/cascading-dropd
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { EditOnRowClickComponent } from './edit-on-row-click/edit-on-row-click.component';
 import { DataQueryComponent } from './data-query/data-query.component';
+import { CustomFilterComponent } from './custom-filter/custom-filter.component';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { DataQueryComponent } from './data-query/data-query.component';
     CascadingDropdownComponent,
     EditOnRowClickComponent,
     DataQueryComponent,
+    CustomFilterComponent,
   ],
   imports: [
     HttpClientModule,
@@ -35,6 +39,7 @@ import { DataQueryComponent } from './data-query/data-query.component';
     GridModule,
     DropDownsModule,
     ReactiveFormsModule,
+    InputsModule,
   ],
   providers: [CategoriesService, ProductsService],
   bootstrap: [AppComponent],

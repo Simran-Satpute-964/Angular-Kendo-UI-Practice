@@ -32,7 +32,7 @@
     "@progress/kendo-angular-pdf-export": "^2.0.0",
     "@progress/kendo-angular-popup": "^3.0.0",
     "@progress/kendo-data-query": "^1.5.4",
-    "@progress/kendo-drawing": "^1.0.0",
+    "@progress/kendo-drawing": "^1.5.12",
     "@progress/kendo-theme-default": "latest",
     "bootstrap": "^4.5.3",
     "rxjs": "~6.6.0",

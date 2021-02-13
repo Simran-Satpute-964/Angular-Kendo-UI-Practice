@@ -46,15 +46,17 @@ const filterPredicateResult = data.filter(predicate);
 // *------------------------------ Sorting ----------------------------------*
 const sortingResult = orderBy(data, [{ field: 'name', dir: 'asc' }]);
 
-const groupByResult = groupBy(data, [
-  { field: 'category' },
-  { field: 'subcategory', dir: 'desc' },
-]);
-
 // *------------------- Sorting Using Predicate -----------------------------*
 
 const comparer = composeSortDescriptors([{ field: 'name', dir: 'asc' }]);
 const sortPredicateResult = data.sort(comparer);
+
+// *------------------------------ Grouping ----------------------------------*
+
+const groupByResult = groupBy(data, [
+  { field: 'category' },
+  { field: 'subcategory', dir: 'desc' },
+]);
 
 // *------------------------------ Aggregate --------------------------------*
 const data2 = [

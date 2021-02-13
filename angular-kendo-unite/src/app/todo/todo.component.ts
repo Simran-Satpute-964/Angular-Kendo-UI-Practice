@@ -51,29 +51,29 @@ export class TodoComponent implements OnInit {
   field = 'hour';
   todos: Todo[] = [
     {
+      item: 'Exercise',
+      due: new Date(2019, 3, 10, 7, 30, 0),
+      hour: this.hour.transform(new Date(2019, 3, 10, 2, 30, 0)),
+    },
+    {
       item: 'Take dog to vet',
-      due: new Date(2019, 3, 10, 2, 30, 0),
+      due: new Date(2019, 3, 10, 8, 30, 0),
       hour: this.hour.transform(new Date(2019, 3, 10, 2, 30, 0)),
     },
     {
       item: 'Get oil change',
-      due: new Date(2019, 3, 10, 2, 30, 0),
+      due: new Date(2019, 3, 10, 10, 30, 0),
       hour: this.hour.transform(new Date(2019, 3, 10, 2, 30, 0)),
     },
     {
-      item: 'Finish super hard work',
-      due: new Date(2019, 3, 10, 2, 30, 0),
-      hour: this.hour.transform(new Date(2019, 3, 10, 2, 30, 0)),
-    },
-    {
-      item: 'Pack for Denver',
-      due: new Date(2019, 3, 10, 3, 30, 0),
+      item: 'Finish project',
+      due: new Date(2019, 3, 10, 11, 30, 0),
       hour: this.hour.transform(new Date(2019, 3, 10, 3, 30, 0)),
     },
     {
-      item: 'Create to-do app',
-      due: new Date(2019, 3, 10, 10, 30, 0),
-      hour: this.hour.transform(new Date(2019, 3, 10, 10, 30, 0)),
+      item: 'Go for walk',
+      due: new Date(2019, 3, 10, 2, 30, 0),
+      hour: this.hour.transform(new Date(2019, 3, 10, 5, 30, 0)),
     },
   ];
 

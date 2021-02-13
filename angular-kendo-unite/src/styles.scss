@@ -56,3 +56,11 @@ $grid-edit-cell-border: rgba(0, 0, 0, .12) !default;
     color: #656565;
     background-color: #f6f6f6;
 }
+
+
+.kendo-timepicker, .k-dateinput, .k-datepicker, .k-datetimepicker, .k-timepicker {
+  height: 30px;
+  @media (max-width: 1220px) {
+    width: 100px !important;
+  }
+}
